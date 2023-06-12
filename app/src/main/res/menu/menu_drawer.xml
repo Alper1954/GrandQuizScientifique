@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/about"
+        android:title="@string/about"
+        android:menuCategory="secondary"/>
+    <item
+        android:id="@+id/param"
+        android:icon="@drawable/param"
+        android:title="@string/param"
+        android:menuCategory="secondary"/>
+    <item
+        android:id="@+id/ranking"
+        android:icon="@drawable/ranking"
+        android:title="@string/ranking"
+        android:menuCategory="secondary"/>
+</menu>

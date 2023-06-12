@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Great Science Quiz</string>
+    <string name="description">This Quiz allows you to test your knowledge
+     in different scientific fields.\n\nAt the end of each question do not forget
+     to read the explanation, you will thus become a real expert in SCIENCE.
+     \n\nYou can view your results in the different areas where you have played
+      and compare them to the results of other players</string>
+    <string name="numQuestion">Q:%1$d</string>
+    <string name="score">score:%1$d</string>
+    <string name="score2">Score: %1$d/20</string>
+    <string name="next_question">Next</string>
+    <string name="explication">Explication</string>
+    <string name="valid">Valid</string>
+    <string name="about">about</string>
+    <string name="param">param</string>
+    <string name="ranking">ranking</string>
+    <string name="choose_cat">Choose a category</string>
+    <string name="catNotAvailable">This category is not available </string>
+    <string name="welcome">Welcome to the Great Science Quiz!</string>
+    <string name="categories"><i>Physics\nAstronomy\nChemistry\nBiology\nBotany\nGeology</i></string>
+    <string name="physics">Physics</string>
+    <string name="astronomy">Astronomy</string>
+    <string name="chemistry">Chemistry</string>
+    <string name="biology">Biology</string>
+    <string name="botany">Botany</string>
+    <string name="geology">Geology</string>
+    <string name="science">All cat</string>
+    <string name="player_title"><i>Enter your name/pseudo:</i></string>
+    <string name="play">Play</string>
+    <string name="name_pseudo">name/pseudo</string>
+    <string name="checkingName">Checking name</string>
+    <string name="badName">Name is already used</string>
+    <string name="newName">Entrez un autre nom</string>
+    <string name="saveError">Name cannot be registered</string>
+    <string name="with_sound">with sound</string>
+    <string name="with_timer">with timeout (60s) for answer</string>
+    <string name="sound_error">sound is not available</string>
+    <string name="sound_off">"sound is disabled</string>
+    <string name="answer1">answer one</string>
+    <string name="answer2">answer two</string>
+    <string name="answer3">answer three</string>
+    <string name="answer4">answer four</string>
+    <string name="good">Correct</string>
+    <string name="error">Error</string>
+    <string name="EndQuiz">End of Quiz</string>
+    <string name="timeout">timeout for answer</string>
+    <string name="scores_ranking">Scores and ranking</string>
+    <string name="rejouer">Play again</string>
+    <string name="quitter">Exit</string>
+    <string name="notavailable">Data not available</string>
+    <string name="noplayer">Player not registered</string>
+    <string name="yes">Yes</string>
+    <string name="confirm">Are you sure to exit?</string>
+    <string name="non">No</string>
+    <string name="connecting" >Connecting</string>
+    <string name="next">next</string>
+</resources>

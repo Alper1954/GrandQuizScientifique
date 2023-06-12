@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="gameFragment"
+            type="aperr.android.grandquizscientifique.screens.GameFragment" />
+        <variable
+            name="roomViewModel"
+            type="aperr.android.grandquizscientifique.screens.RoomViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".screens.GameFragment">
+
+            <TextView
+                android:id="@+id/numQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@{gameFragment.txtNumQuestion(roomViewModel.numQuestion)}"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Q1" />
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@{gameFragment.txtScore(roomViewModel.score)}"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/numQuestion"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Score:0" />
+
+
+            <ImageView
+                android:id="@+id/sound"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="16dp"
+                android:importantForAccessibility="no"
+                android:visibility="@{roomViewModel.timerSetting?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@+id/score"
+                app:layout_constraintStart_toEndOf="@+id/score"
+                app:layout_constraintTop_toTopOf="@+id/score"
+                app:srcCompat="@drawable/baseline_timer_24" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{roomViewModel.currentTime.toString() + "s"}'
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="@{roomViewModel.timerSetting?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@+id/sound"
+                app:layout_constraintStart_toEndOf="@+id/sound"
+                app:layout_constraintTop_toTopOf="@+id/sound"
+                tools:text="0s" />
+
+            <TextView
+                android:id="@+id/questionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_box"
+                android:fontFamily="@font/buxton_sketch"
+                android:text="@{roomViewModel.currentQuestion.questionText}"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numQuestion"
+                tools:text="question text" />
+
+
+            <TextView
+                android:id="@+id/answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundResource="@{gameFragment.backgroundAnswer(1,roomViewModel.state)}"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/buxton_sketch"
+                android:onClick="@{() -> roomViewModel.onAnswer(1)}"
+                android:text="@{roomViewModel.currentQuestion.answer1Text}"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionText"
+                tools:text="answer1" />
+
+            <TextView
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundResource="@{gameFragment.backgroundAnswer(2,roomViewModel.state)}"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/buxton_sketch"
+                android:onClick="@{() -> roomViewModel.onAnswer(2)}"
+                android:text="@{roomViewModel.currentQuestion.answer2Text}"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/answer1"
+                tools:text="answer2" />
+
+
+            <TextView
+                android:id="@+id/answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundResource="@{gameFragment.backgroundAnswer(3,roomViewModel.state)}"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/buxton_sketch"
+                android:onClick="@{() -> roomViewModel.onAnswer(3)}"
+                android:text="@{roomViewModel.currentQuestion.answer3Text}"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                android:visibility="@{roomViewModel.currentQuestion.numberAnswers==2?View.GONE:View.VISIBLE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/answer2"
+                tools:text="answer3" />
+
+            <TextView
+                android:id="@+id/answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundResource="@{gameFragment.backgroundAnswer(4,roomViewModel.state)}"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/buxton_sketch"
+                android:onClick="@{() -> roomViewModel.onAnswer(4)}"
+                android:text="@{roomViewModel.currentQuestion.answer4Text}"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                android:visibility="@{roomViewModel.currentQuestion.numberAnswers==4?View.VISIBLE:View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/answer3"
+                tools:text="answer4" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:onClick="@{() -> roomViewModel.getNextQuestion()}"
+                android:text="@string/next_question"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:visibility="@{((roomViewModel.state==2)||(roomViewModel.state==4))?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toStartOf="@+id/valid"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/finQuiz"
+                app:layout_constraintTop_toBottomOf="@+id/answer4" />
+
+            <Button
+                android:id="@+id/explication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:onClick="@{() -> gameFragment.callExplication()}"
+                android:text="@string/explication"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:visibility="@{(roomViewModel.state >1)?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/valid"
+                app:layout_constraintTop_toBottomOf="@+id/answer4" />
+
+            <Button
+                android:id="@+id/valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:onClick="@{() -> gameFragment.valid()}"
+                android:text="@string/valid"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:visibility="@{(roomViewModel.state==1)?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toStartOf="@+id/explication"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/next"
+                app:layout_constraintTop_toBottomOf="@+id/answer4" />
+
+            <Button
+                android:id="@+id/finQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/buxton_sketch"
+                android:onClick="@{() -> gameFragment.finQuiz()}"
+                android:text="@string/EndQuiz"
+                android:textColor="@color/black"
+                android:backgroundTint = "@color/orange"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:visibility="@{((roomViewModel.state==3)||(roomViewModel.state==5))?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toStartOf="@+id/next"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/answer4" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

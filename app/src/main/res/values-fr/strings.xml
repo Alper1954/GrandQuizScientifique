@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Grand Quiz Scientifique</string>
+    <string name="description">Ce Quiz vous permet de tester vos connaissances
+    dans différents domaines scientifiques.\n\nA la fin de chaque question n\'oubliez pas
+    de lire l\'explication, vous deviendrez ainsi un véritable CRACK en SCIENCE.
+    \n\nVous pouvez consulter vos résultats dans les différents domaines où vous avez joué
+     et les comparer aux résultats des autres joueurs.</string>
+    <string name="numQuestion">Q:%1$d</string>
+    <string name="score">score:%1$d</string>
+    <string name="score2">Score: %1$d/20</string>
+    <string name="next_question">Suite</string>
+    <string name="explication">Explication</string>
+    <string name="valid">Valider</string>
+    <string name="about">à propos</string>
+    <string name="param">options</string>
+    <string name="ranking">résultats</string>
+    <string name="choose_cat">Choisissez une catégorie</string>
+    <string name="catNotAvailable">Cette catégorie n\'est pas disponible </string>
+    <string name="welcome">Bienvenue dans le Grand Quiz Scientifique!</string>
+    <string name="categories"><i>Physique\nAstronomie\nChimie\nBiologie\nBotanique\nGéologie</i></string>
+    <string name="physics">Physique</string>
+    <string name="astronomy">Astronomie</string>
+    <string name="chemistry">Chimie</string>
+    <string name="biology">Biologie</string>
+    <string name="botany">Botanique</string>
+    <string name="geology">Géologie</string>
+    <string name="science">Toutes cat.</string>
+    <string name="player_title"><i>Entrer votre nom/pseudo:</i></string>
+    <string name="play">Jouez</string>
+    <string name="name_pseudo">nom/pseudo</string>
+    <string name="checkingName">Vérification</string>
+    <string name="badName">Nom déja utilisé</string>
+    <string name="newName">Entrez un autre nom</string>
+    <string name="saveError">Erreur d\'enregistrement du nom</string>
+    <string name="with_sound">Synthèse vocale</string>
+    <string name="with_timer">Temps limité (60s) pour la réponse</string>
+    <string name="sound_error">La synthèse vocale n\'est pas disponible</string>
+    <string name="sound_off">La synthèse vocale est désactivée</string>
+    <string name="answer1">réponse une</string>
+    <string name="answer2">réponse deux</string>
+    <string name="answer3">réponse trois</string>
+    <string name="answer4">réponse quatre</string>
+    <string name="good">Correct</string>
+    <string name="error">Erreur</string>
+    <string name="EndQuiz">Fin du Quiz</string>
+    <string name="timeout">Temps dépassé pour la réponse</string>
+    <string name="scores_ranking">Vos scores et classement</string>
+    <string name="rejouer">Rejouez</string>
+    <string name="quitter">Quittez</string>
+    <string name="notavailable">Données non disponibles</string>
+    <string name="noplayer">Joueur non registré</string>
+    <string name="yes">Oui</string>
+    <string name="confirm">Confirmer la fermeture</string>
+    <string name="non">Non</string>
+    <string name="connecting" >Chargement</string>
+    <string name="next">suite</string>
+</resources>

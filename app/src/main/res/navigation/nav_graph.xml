@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="New User"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="aperr.android.grandquizscientifique.screens.WelcomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="aperr.android.grandquizscientifique.screens.GameFragment"
+        android:label="{catname}"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_explicationFragment"
+            app:destination="@id/explicationFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_gameFragment_to_finQuiz"
+            app:destination="@id/finQuiz"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <argument
+            android:name="catid"
+            app:argType="integer" />
+        <argument
+            android:name="catname"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/explicationFragment"
+        android:name="aperr.android.grandquizscientifique.screens.ExplicationFragment"
+        android:label="{catname}"
+        tools:layout="@layout/fragment_explication">
+        <argument
+            android:name="catid"
+            app:argType="integer" />
+        <argument
+            android:name="catname"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/param"
+        android:name="aperr.android.grandquizscientifique.screens.Param"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_param" />
+    <fragment
+        android:id="@+id/ranking"
+        android:name="aperr.android.grandquizscientifique.screens.Ranking"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_ranking">
+        <action
+            android:id="@+id/action_ranking_to_result"
+            app:destination="@id/result"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="aperr.android.grandquizscientifique.screens.About"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="aperr.android.grandquizscientifique.screens.StartFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_newUserFragment"
+            app:destination="@id/newUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newUserFragment"
+        android:name="aperr.android.grandquizscientifique.screens.NewUserFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_new_user">
+        <action
+            android:id="@+id/action_newUserFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finQuiz"
+        android:name="aperr.android.grandquizscientifique.screens.FinQuiz"
+        android:label="{catname}"
+        tools:layout="@layout/fragment_fin_quiz">
+        <action
+            android:id="@+id/action_finQuiz_to_result"
+            app:destination="@id/result"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <argument
+            android:name="catid"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_finQuiz_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <argument
+            android:name="catname"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/result"
+        android:name="aperr.android.grandquizscientifique.screens.Result"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="player"
+            app:argType="string" />
+        <argument
+            android:name="posCat"
+            app:argType="integer" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialplayer"
+        android:name="aperr.android.grandquizscientifique.screens.Dialplayer"
+        android:label="fragment_dialplayer"/>
+</navigation>

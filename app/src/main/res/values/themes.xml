@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GrandQuizScientifique" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="MyTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- border attributes  -->
+                <!-- color  -->
+        <item name="boxStrokeColor">@color/mystroke_color_selector</item>
+                <!-- width -->
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+
+        <!-- label/hint attributes  -->
+                 <!-- label text typography  -->
+        <item name="hintTextAppearance">@style/MyHintTextAppearance</item>
+                 <!-- color label when collapsed in the border  -->
+        <item name="hintTextColor">@color/black</item>
+                <!-- color label when displayed in text field  -->
+        <item name="android:textColorHint">@color/gray</item>
+
+        <!-- helper text attributes  -->
+                <!-- helper text typography  -->
+        <item name="helperTextTextAppearance">@style/MyHelperTextAppearance</item>
+                <!-- color helper text  -->
+        <item name="helperTextTextColor">@color/black</item>
+
+        <!-- Error text attributes  -->
+            <!-- Error text typography  -->
+        <item name="errorTextAppearance">@style/MyErrorTextAppearance</item>
+            <!-- color helper text  -->
+        <item name="errorTextColor">@color/red</item>
+
+        <!-- start icon (for person)  -->
+            <!-- color   -->
+        <item name="startIconTint">@color/yellow</item>
+
+        <!-- end icon (for deleting text)  -->
+            <!-- mode = "clear_text"   -->
+        <item name="endIconMode">clear_text</item>
+</style>
+
+
+<style name="MyHintTextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <!-- hint size when collapsed in the border   -->
+        <item name="android:textSize">13sp</item>
+</style>
+
+<style name="MyHelperTextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <!-- helper text size  -->
+        <item name="android:textSize">14sp</item>
+</style>
+
+<style name="MyErrorTextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <!-- helper text size  -->
+    <item name="android:textSize">14sp</item>
+</style>
+
+
+
+<style name="TextAppearance.App.CollapsingToolbar.Expanded" parent="TextAppearance.MaterialComponents.Headline4">
+<item name="android:textColor">?attr/colorOnPrimary</item>
+</style>
+
+<style name="TextAppearance.App.CollapsingToolbar.Collapsed" parent="TextAppearance.MaterialComponents.Headline6">
+<item name="android:textColor">?attr/colorOnPrimary</item>
+</style>
+
+<style name="TextAppearance.App.CollapsingToolbar.Expanded_Small" parent="TextAppearance.MaterialComponents.Headline4">
+<item name="android:textSize">1sp</item>
+</style>
+
+</resources>
